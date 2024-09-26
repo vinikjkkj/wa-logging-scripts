@@ -23,6 +23,7 @@
 ![callstack_sent](../assets/callstack_recv.png)
 
 3. **Find correct class in Log**  
+   Will always be after `.run()`
 
 ![class_sent](../assets/class_recv.png)
 
