@@ -6,46 +6,50 @@
 
 ## Tools Needed
 
-- [JADX](https://github.com/skylot/jadx) to decompile the APK.
 - [Frida](https://github.com/frida/frida) to log WhatsApp.
 - Emulator or Rooted Device (this tutorial will use an Emulator).
-- Whatsapp APK > Ensure the APK version matches the one installed on your Emulator (VERY IMPORTANT)
+- Whatsapp APK - Ensure the APK version matches the one installed on your Emulator (VERY IMPORTANT)
 
 ## How to Log RECV Nodes
 
-1. **Open APK in JADX**  
-   Open the downloaded APK in JADX to begin decompiling.
+1. **Run socket.js script**  
 
-2. **Search for the Correct Class**  
-   In JADX, search for `ConnectionThreadRequestsImpl/presence/unavailable`.
+   ```bash
+   frida -U -f com.whatsapp -l path/to/socket.js
+   ```
 
-![Open Inspector](../assets/search_recv_jadx.png)
+   Wait for SocketInputStream log.
 
-3. **Open the Class**  
-   When you find the search result, open the corresponding class.
+![callstack_sent](../assets/callstack_recv.png)
 
-4. **Find correct Names**  
-   The first you will replace in `Java.use()`, the last you will replace `A06`.
+3. **Find correct class in Log**  
 
-![Open Inspector](../assets/classes_recv_jadx.png)
+![class_sent](../assets/class_recv.png)
 
-5. **Run the Script with Frida**  
+4. **Replace the Class**  
+   Replace `9TV` and `A06` in script.
+
+6. **Run the Script with Frida**  
    Execute the following command to run Frida and start logging:
 
    ```bash
    frida -U -f com.whatsapp -l path/to/script
    ```
-
 ## How to Log SENT Nodes
 
 1. **Run socket.js script**  
+
+   ```bash
+   frida -U -f com.whatsapp -l path/to/socket.js
+   ```
+
    Wait for SocketOutputStream log.
 
-![Open Inspector](../assets/callstack_sent.png)
+![callstack_sent](../assets/callstack_sent.png)
 
 3. **Find correct class in Log**  
 
-![Open Inspector](../assets/class_sent.png)
+![class_sent](../assets/class_sent.png)
 
 4. **Replace the Class**  
    Replace `7OT` in script.

@@ -6,7 +6,7 @@ Follow the steps below to run the scripts on WhatsApp Web:
 2. **Open the Inspector**: press `Ctrl + Shift + C` (Windows) in Chrome.
 3. Navigate to the **Console** tab.
 
-![Open Inspector](../assets/console.png)
+![console](../assets/console.png)
 
 4. Paste the script code in the console and press **Enter**.
 
