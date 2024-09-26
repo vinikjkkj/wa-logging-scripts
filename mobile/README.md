@@ -8,7 +8,6 @@
 
 - [Frida](https://github.com/frida/frida) to log WhatsApp.
 - Emulator or Rooted Device (this tutorial will use an Emulator).
-- Whatsapp APK - Ensure the APK version matches the one installed on your Emulator (VERY IMPORTANT)
 
 ## How to Log RECV Nodes
 
