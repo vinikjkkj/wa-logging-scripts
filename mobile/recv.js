@@ -1,5 +1,5 @@
 Java.perform(function() {
-    var recvNode2 = Java.use('X.9TV')
+    var recvNode2 = Java.use('X.1n4')
     recvNode2.A06.implementation = function () {
         var result = this.A06()
 
