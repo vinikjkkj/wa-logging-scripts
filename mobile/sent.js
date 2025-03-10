@@ -1,5 +1,5 @@
 Java.perform(function() {
-    var sendNode = Java.use('X.7OT')
+    var sendNode = Java.use('X.1nU')
     sendNode.handleMessage.implementation = function (p1) {
         console.log('\u001B[32m[SENT]\u001B[0m', p1)
 
